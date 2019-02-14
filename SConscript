@@ -5,10 +5,12 @@ from building import *
 # get current directory
 cwd = GetCurrentDir()
 
-zlib_dir = cwd + '/zlib'
-src = Glob(zlib_dir + '/*.c')
+zlib_inc = cwd + '/inc'
+zlib_src = cwd + '/src'
 
-CPPPATH = [zlib_dir]
+src = Glob(zlib_src + '/*.c')
+
+CPPPATH = [zlib_inc]
 
 group = DefineGroup('zlib', src, depend = ['PKG_USING_ZLIB'], CPPPATH = CPPPATH)
 
