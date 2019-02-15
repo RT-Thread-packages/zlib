@@ -2,7 +2,7 @@
 
 ## 1、介绍
 
-Zlib 是一款免费的、通用的、合法的、不受任何限制的无损数据压缩库。这个 [zlib](https://github.com/RT-Thread-packages/zlib) 库是RT-thread针对官方 [zlib](https://github.com/madler/zlib) 的C库的移植， 有关 zlib 的更多信息，请参阅[官方说明](http://www.zlib.net/) 。
+Zlib 是一款免费的、通用的、合法的、不受任何限制的无损数据压缩库。这个 [zlib](https://github.com/RT-Thread-packages/zlib) 库是RT-thread针对官方[zlib](https://github.com/madler/zlib)的C库的移植， 有关 zlib 的更多信息，请参阅[http://www.zlib.net/) 。
 
 ## 2、获取方式
 
@@ -18,24 +18,35 @@ Zlib 是一款免费的、通用的、合法的、不受任何限制的无损数
 
 ### 3.2 运行示例
 
-## 4、注意事项
+该示例为一个简单的文件压缩和解压的例程，需要依赖文件系统，用到的命令有两个` -c`和 `-d`， `-c`命令压缩一个文件到另一个文件，`-d`命令解压一个文件到另一个文件。   
 
-### 4.1 与官方源码差异
+使用方式：
 
-本次移植基于 zlib 的 1.2.3 版本，该版本的[下载地址](https://github.com/madler/zlib/archive/v1.2.3.zip)请点击链接。
-
-移植过程中对源代码进行了一定的修改，如下所示：
-
-1. 对源码 `crc32.c` 文件的修改
-
-在第 22 行添加如下代码：
+msh cmd 压缩： `fastlz_test -c test test_com`  
 
 ```c
-#define DYNAMIC_CRC_TABLE
+msh />zlib_test -c test test_com
+msh />ls
+Directory /:
+test                145
+test_com            77
 ```
-2. 对源码 `zutil.c` 文件的修改
+msh cmd 解压： `zlib_test -d test_com test_decom  `
 
-在 294 行到 316 行添加开启 `RT_USING_RTGUI` 宏时执行不同的内存分配和释放操作。
+```c
+msh />zlib_test -d test_com test_decom
+msh />ls
+Directory /:
+test                145
+test_com            77
+test_decom          145
+```
+
+## 4、常见问题
+
+注意，压缩文件需要大约 290 k 内存，内存较小时可能会出现压缩失败。
+
+解压文件大约需要 18 k 内存占用。
 
 ## 5、参考资料
 
