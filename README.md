@@ -1,8 +1,8 @@
-# Zlib
+# Zlib 通用压缩库
 
 ## 1、介绍
 
-Zlib 是一款免费的、通用的、合法的、不受任何限制的无损数据压缩库。这个 [zlib](https://github.com/RT-Thread-packages/zlib) 库是RT-thread针对官方[zlib](https://github.com/madler/zlib)的C库的移植， 有关 zlib 的更多信息，请参阅[http://www.zlib.net/) 。
+Zlib 是一款免费的、通用的、合法的、不受任何限制的无损数据压缩库。 [zlib](https://github.com/RT-Thread-packages/zlib) 库是RT-thread针对官方 [zlib](https://github.com/madler/zlib) 的 C 库的移植， 更多信息请参阅[http://www.zlib.net/) 。
 
 ## 2、获取方式
 
@@ -20,28 +20,28 @@ Zlib 是一款免费的、通用的、合法的、不受任何限制的无损数
 
 ### 3.2 运行示例
 
-该示例为一个简单的文件压缩和解压的例程，需要依赖文件系统，用到的命令有两个` -c`和 `-d`， `-c`命令压缩一个文件到另一个文件，`-d`命令解压一个文件到另一个文件。   
+该示例为一个简单的文件压缩和解压的例程，需要依赖文件系统，用到的 `zlib_test` 命令有两个 `-c` 和  `-d` 两个参数。使用 `-c` 参数将会压缩一个文件到另一个文件，`-d` 命令解压一个压缩文件到另一个文件。 
 
 使用方式：
 
-msh cmd 压缩： `fastlz_test -c test test_com`  
+压缩命令： `zlib_test -c test test_com`  
 
 ```c
 msh />zlib_test -c test test_com
 msh />ls
 Directory /:
-test                145
-test_com            77
+test                145          //压缩前文件大小为 145 字节 
+test_com            77           //压缩后文件大小为 77 字节
 ```
-msh cmd 解压： `zlib_test -d test_com test_decom  `
+解压命令： `zlib_test -d test_com test_decom  `
 
 ```c
 msh />zlib_test -d test_com test_decom
 msh />ls
 Directory /:
-test                145
-test_com            77
-test_decom          145
+test                145          
+test_com            77          //压缩后文件大小为 77 字节
+test_decom          145         //解压后文件大小为 145 字节
 ```
 
 ## 4、常见问题
