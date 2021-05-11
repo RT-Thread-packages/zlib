@@ -210,7 +210,7 @@ int zlib_test(int argc, char ** argv)
         ret = inf(fd_in, fd_out);
         if (ret != Z_OK)
         {
-            zerr(ret); 
+            zerr(ret);
             rt_kprintf("[zlib] decompress file error!\n");
             return ret;
         }
