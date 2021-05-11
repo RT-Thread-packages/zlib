@@ -4,7 +4,7 @@
 
 Zlib 是一款免费的、通用的、合法的、不受任何限制的无损数据压缩库，使用 zlib 库可以轻松实现 gzip 格式压缩。该库提供多种不同压缩方式，如最快速度和最大压缩比压缩，各种配置选项可以参考 `zlib.h` 文件。
 
-本软件包是 RT-thread 针对 [zlib](https://github.com/madler/zlib) 官方 1.2.3 版本的移植， 更多信息请参阅[官方文档](http://www.zlib.net/) 。
+本软件包是 RT-thread 针对 [zlib](https://github.com/madler/zlib) 官方 1.2.11 版本的移植， 更多信息请参阅[官方文档](http://www.zlib.net/) 。
 
 ## 2、获取方式
 
@@ -12,7 +12,7 @@ Zlib 是一款免费的、通用的、合法的、不受任何限制的无损数
 ```
 `RT-Thread online package` -> 
      `miscellaneous package` -> 
-         [*] Zlib: general purpose data compression library.  --->
+         [*] zlib: general purpose data compression library.  --->
 ```
 
 ## 3、示例介绍
@@ -54,9 +54,3 @@ test_decom          145         //解压后文件大小为 145 字节
 注意，压缩文件需要大约 270 k 内存，如果内存不够会出现压缩失败的情况。
 
 解压文件大约需要 18 k 内存占用。
-
-## 5、参考资料
-
-- Zlib 官方网站：https://zlib.net/
-
-
