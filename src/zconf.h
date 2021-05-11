@@ -9,11 +9,17 @@
 #define ZCONF_H
 
 /* RT-Thread config */
+#include <rtconfig.h>
+#ifdef RT_USING_LIBC
 #ifndef STDC
 #define STDC
 #endif
 #define Z_HAVE_STDARG_H
+#endif
+
+#ifdef RT_USING_DFS
 #define Z_HAVE_UNISTD_H
+#endif
 
 /*
  * If you *really* need a unique prefix for all types and library functions,
