@@ -8,6 +8,13 @@
 #ifndef ZCONF_H
 #define ZCONF_H
 
+/* RT-Thread config */
+#ifndef STDC
+#define STDC
+#endif
+#define Z_HAVE_STDARG_H
+#define Z_HAVE_UNISTD_H
+
 /*
  * If you *really* need a unique prefix for all types and library functions,
  * compile with -DZ_PREFIX. The "standard" zlib should be compiled without it.
