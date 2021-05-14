@@ -8,10 +8,10 @@ Zlib 是一款免费的、通用的、合法的、不受任何限制的无损数
 
 ## 2、获取方式
 
--  可通过 env 工具辅助下载：
+可通过 env 工具辅助下载：
 ```
-`RT-Thread online package` -> 
-     `miscellaneous package` -> 
+RT-Thread online package -> 
+     miscellaneous package -> 
          [*] zlib: general purpose data compression library.  --->
 ```
 
