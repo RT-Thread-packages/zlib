@@ -1,4 +1,4 @@
-# zlib 通用数据压缩库
+# zlib 通用数据压缩库 for RT-Thread
 
 ## 1、介绍
 
@@ -50,3 +50,7 @@ test_decom          145         //解压后文件大小为 145 字节
 注意，压缩文件需要大约 270 k 内存，如果内存不够会出现压缩失败的情况。
 
 解压文件大约需要 18 k 内存占用。
+
+## 5、维护
+维护：[Meco Man](https://github.com/mysterywolf)
+主页：<https://github.com/RT-Thread-packages/vi>
