@@ -52,4 +52,5 @@ test_decom          145         //解压后文件大小为 145 字节
 
 ## 5、维护
 维护：[Meco Man](https://github.com/mysterywolf)
+
 主页：<https://github.com/RT-Thread-packages/vi>
