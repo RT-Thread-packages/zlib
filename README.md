@@ -1,4 +1,4 @@
-# zlib 通用数据压缩库 for RT-Thread
+# zlib for RT-Thread 通用数据压缩库 
 
 ## 1、介绍
 
@@ -8,7 +8,6 @@ Zlib 是一款免费的、通用的、合法的、不受任何限制的无损数
 
 ## 2、获取方式
 
-可通过 env 工具辅助下载：
 ```
 RT-Thread online package -> 
      miscellaneous package -> 
