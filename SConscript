@@ -7,7 +7,7 @@ cwd = GetCurrentDir()
 
 zlib_src = cwd + '/src'
 
-src = Glob(zlib_src + '/*.c')
+src = Glob('src/*.c')
 
 if GetDepend('ZLIB_USING_SAMPLE'):
     src += Glob('zlib_sample.c')
